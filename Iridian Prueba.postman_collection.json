@@ -1,0 +1,732 @@
+{
+	"info": {
+		"_postman_id": "5fec07ac-0f97-4965-b373-e68765efe4a6",
+		"name": "Iridian Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21878930"
+	},
+	"item": [
+		{
+			"name": "School System",
+			"item": [
+				{
+					"name": "Students",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perPage\": 10,\r\n    \"page\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Students/Index",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Students",
+										"Index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store Students",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"camilo\",\r\n    \"lastname\": \"acacio\",\r\n    \"document\": \"1004845200\",\r\n    \"phone\": \"3222759176\",\r\n    \"email\": \"camiloacacio16@hmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Students/Store",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Students",
+										"Store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"camilo\",\r\n    \"lastname\": \"acacio\",\r\n    \"document\": \"1004845200\",\r\n    \"phone\": \"3222759176\",\r\n    \"email\": \"camiloacacio16@hmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Students/Update/1",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Students",
+										"Update",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Students/Delete",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Students",
+										"Delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Restore",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Students/Restore",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Students",
+										"Restore"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Courses",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perPage\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Courses/Index",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Courses",
+										"Index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ingles\",\r\n    \"description\": \"Curso de ingles\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Courses/Store",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Courses",
+										"Store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Assign Student",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"student_id\": 1,\r\n    \"course_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Courses/AssignStudent",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Courses",
+										"AssignStudent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Student",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"student_id\": 1,\r\n    \"course_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Courses/RemoveStudent",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Courses",
+										"RemoveStudent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Sociales\",\r\n    \"description\": \"Curso de sociales\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Courses/Update/2",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Courses",
+										"Update",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Evaluations",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perPage\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Evaluations/Index",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Evaluations",
+										"Index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course_id\": 1,\r\n    \"name\": \"To Be\",\r\n    \"date\": \"2023-12-03\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Evaluations/Store",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Evaluations",
+										"Store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Calculate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Evaluations/Calculate",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Evaluations",
+										"Calculate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course_id\": 1,\r\n    \"name\": \"Historia\",\r\n    \"date\": \"2023-12-03\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Evaluations/Update/2",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Evaluations",
+										"Update",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Questions",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perPage\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Questions/Index",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Questions",
+										"Index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"evaluation_id\": 1,\r\n    \"question\": \"cuanto es 7 + 7\",\r\n    \"multiple\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Questions/Store",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Questions",
+										"Store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"evaluation_id\": 1,\r\n    \"question\": \"cuanto es 7 + 7\",\r\n    \"multiple\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Questions/Update/2",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Questions",
+										"Update",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Answers",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perPage\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Answers/Index",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Answers",
+										"Index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"question_id\": 1,\r\n    \"answer\": \"15\",\r\n    \"correct\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Answers/Store",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Answers",
+										"Store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"question_id\": 1,\r\n    \"answer\": \"14\",\r\n    \"correct\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Answers/Update/2",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Answers",
+										"Update",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contact",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perPage\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Contacts/Index",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Contacts",
+										"Index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"camilo\",\r\n    \"lastname\": \"acacio\",\r\n    \"email\": \"camiloacacio16@gmail.com\",\r\n    \"phone\": \"3222759176\",\r\n    \"contact_area_id\": 1,\r\n    \"message\": \"mensaje de prueba\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://iridian.test/api/V1/Contacts/Store",
+									"protocol": "http",
+									"host": [
+										"iridian",
+										"test"
+									],
+									"path": [
+										"api",
+										"V1",
+										"Contacts",
+										"Store"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

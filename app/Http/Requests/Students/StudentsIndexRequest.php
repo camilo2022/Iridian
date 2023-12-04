@@ -47,8 +47,15 @@ class StudentsIndexRequest extends FormRequest
     public function messages()
     {
         return [
-            'perPage.numeric' => 'El campo Numero de registros por página debe ser un valor numérico.',
-            'perPage.required' => 'El campo Numero de registros por página es requerido.'
+            'perPage.numeric' => 'El campo :attribute debe ser un valor numérico.',
+            'perPage.required' => 'El campo :attribute es requerido.'
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'perPage' => 'numero de registros por página'
         ];
     }
 }

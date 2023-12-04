@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Http\Requests\Evaluations\EvaluationsStoreRequest;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,11 +16,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $this->call(StudentsSeeder::class);
+        $this->call(CoursesSeeder::class);
+        $this->call(StudentCoursesSeeder::class);
+        $this->call(EvaluationSeeder::class);
+        $this->call(QuestionsSeeder::class);
+        $this->call(AnswersSeeder::class);
+        $this->call(StudentQuestionAnswerSeeder::class);
+        $this->call(ContactAreasSeeder::class);
     }
 }

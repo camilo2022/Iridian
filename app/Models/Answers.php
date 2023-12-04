@@ -10,10 +10,11 @@ class Answers extends Model
 {
     use HasFactory;
 
-    protected $table = 'questions';
+    protected $table = 'answers';
     protected $fillable = [
         'question_id',
-        'answer'
+        'answer',
+        'correct'
     ];
 
     public function question() : BelongsTo

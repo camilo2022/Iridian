@@ -18,7 +18,6 @@ class Students extends Model
         'lastname',
         'document',
         'phone',
-        'birth_date',
         'email'
     ];
 
@@ -35,15 +34,5 @@ class Students extends Model
     public function answers() : BelongsToMany
     {
         return $this->belongsToMany(Answers::class, 'student_question_answers', 'student_id', 'answer_id');
-    }
-
-    public function scopeSearch($query, $search)
-    {
-        return $query->where('name', 'like', '%' . $search . '%')
-        ->orWhere('lastname', 'like', '%' . $search . '%')
-        ->orWhere('document', 'like', '%' . $search . '%')
-        ->orWhere('phone', 'like', '%' . $search . '%')
-        ->orWhere('birth_date', 'like', '%' . $search . '%')
-        ->orWhere('email', 'like', '%' . $search . '%');
     }
 }

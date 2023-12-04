@@ -15,7 +15,7 @@ class Questions extends Model
     protected $fillable = [
         'evaluation_id',
         'question',
-        'type_question_id',
+        'multiple',
     ];
 
     public function answers() : HasMany
@@ -26,10 +26,5 @@ class Questions extends Model
     public function evaluation() : BelongsTo
     {
         return $this->belongsTo(Evaluations::class, 'evaluation_id');
-    }
-
-    public function type_question() : BelongsTo
-    {
-        return $this->belongsTo(TypesQuestion::class, 'type_question_id');
     }
 }

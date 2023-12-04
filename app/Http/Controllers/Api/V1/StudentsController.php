@@ -25,13 +25,7 @@ class StudentsController extends Controller
     public function index(StudentsIndexRequest $request)
     {
         try {
-            $students = Students::when($request->filled('search'),
-                    function ($query) use ($request) {
-                        $query->search($request->input('search'));
-                    }
-                )
-                ->withTrashed() //Trae los registros 'eliminados'
-                ->paginate($request->input('perPage'));
+            $students = Students::paginate($request->input('perPage'));
 
             return $this->successResponse(
                 new StudentsIndexCollection($students),
@@ -67,7 +61,6 @@ class StudentsController extends Controller
             $student->lastname = $request->input('lastname');
             $student->document = $request->input('document');
             $student->phone = $request->input('phone');
-            $student->birth_date = Carbon::parse($request->input('birth_date'))->format('Y-m-d');
             $student->email = $request->input('email');
             $student->save();
 
@@ -105,7 +98,6 @@ class StudentsController extends Controller
             $student->lastname = $request->input('lastname');
             $student->document = $request->input('document');
             $student->phone = $request->input('phone');
-            $student->birth_date = Carbon::parse($request->input('birth_date'))->format('Y-m-d');
             $student->email = $request->input('email');
             $student->save();
 

@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('document');
             $table->string('phone');
-            $table->date('birth_date');
             $table->string('email')->unique();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

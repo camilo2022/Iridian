@@ -13,10 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('types_questions', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->boolean('multiple');
+            $table->string('lastname');
+            $table->string('email');
+            $table->string('phone');
+            $table->unsignedBigInteger('contact_area_id');
+            $table->string('message');
+            $table->foreign('contact_area_id')->references('id')->on('contact_areas')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types_questions');
+        Schema::dropIfExists('contacts');
     }
 };

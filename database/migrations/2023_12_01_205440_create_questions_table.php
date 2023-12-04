@@ -17,9 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('evaluation_id');
             $table->string('question');
-            $table->unsignedBigInteger('type_question_id');
+            $table->boolean('multiple');
             $table->foreign('evaluation_id')->references('id')->on('evaluations')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('type_question_id')->references('id')->on('types_questions')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TypesQuestion extends Model
+class ContactArea extends Model
 {
     use HasFactory;
-    
-    protected $table = 'types_questions';
+
+    protected $table = 'contact_areas';
     protected $fillable = [
         'name',
-        'multiple',
     ];
 }

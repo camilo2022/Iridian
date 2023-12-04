@@ -14,6 +14,30 @@ class StudentsIndexCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'students' => $this->collection->map(function ($student) {
+                return [
+                    'id' => $student->id,
+                    'name' => $student->name,
+                    'document' => $student->document,
+                    'phone' => $student->phone,
+                    'email' => $student->email,
+                ];
+            }),
+            'meta' => [
+                'pagination' => $this->paginationMeta(),
+            ],
+        ];
+    }
+
+    protected function paginationMeta()
+    {
+        return [
+            'total' => $this->total(),
+            'count' => $this->count(),
+            'per_page' => $this->perPage(),
+            'current_page' => $this->currentPage(),
+            'total_pages' => $this->lastPage(),
+        ];
     }
 }
